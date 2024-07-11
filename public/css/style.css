@@ -1,0 +1,150 @@
+.body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+}
+
+.fa-compass{
+    color: #fe242d;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+.footer-info a{
+    text-decoration: none;
+    color: #222222;
+
+}
+
+.footer-info a:hover{
+    text-decoration: underline;
+}
+ 
+
+#social-icon,#footer-info,#comp{
+    width: 100%;
+   display: flex;
+   align-items: center;
+   margin:auto; 
+   
+   }
+
+#social-icon i{
+    font-size: 1.4rem;
+    margin-right:1rem ;
+}
+#footer-info a{
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: black;
+    
+}
+.info{
+    justify-content: center;
+}
+#comp{
+    color: black;
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    margin: auto;
+    background-color:#ebebeb;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text{
+    font-weight: 400;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn{
+    background-color: #fe242d !important;
+    color: black !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    margin-left: 23rem !important;
+    width: 7rem !important;
+}
+
+.add-btn:hover{
+background-color: black !important;
+color: white !important;
+
+}
+
+.form-control{
+    border-color:black !important;
+    border-width: 2px !important;
+    
+}
+.show-img{
+    height: 30vh;
+
+}
+
+.btn{
+    background-color: #fe242d !important;
+    color: black !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    box-shadow:#222222 !important;
+    width: 7rem !important;
+    text-decoration: none;
+    text-align:justify;
+    
+}
+
+.btn:hover{
+background-color: black !important;
+color: white !important;
+
+}
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
