@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div id="listings"></div>
+
+    <script src="listings.js"></script>
+    <script>
+        const sampleListings = [
+            // ... (your sample listings data)
+        ];
+
+        // Define your filtering function
+        function filterListings(listings, criteria) {
+            return listings.filter(listing => {
+                let isValid = true;
+                if (criteria.location) {
+                    isValid = isValid && listing.location.toLowerCase() === criteria.location.toLowerCase();
+                }
+                if (criteria.country) {
+                    isValid = isValid && listing.country.toLowerCase() === criteria.country.toLowerCase();
+                }
+                if (criteria.maxPrice) {
+                    isValid = isValid && listing.price <= criteria.maxPrice;
+                }
+                return isValid;
+            });
+        }
+
+        // Example criteria to filter listings
+        const criteria = {
+            location: 'Aspen',  // Filter by location
+            country: 'United States', // Filter by country
+            maxPrice: 2000  // Filter by maximum price
+        };
+
+        // Filter the listings
+        const filteredListings = filterListings(sampleListings, criteria);
+
+        // Display the filtered listings
+        const listingsContainer = document.getElementById('listings');
+        filteredListings.forEach(listing => {
+            const listingDiv = document.createElement('div');
+            listingDiv.innerHTML = `
+                <h2>${listing.title}</h2>
+                <p>${listing.description}</p>
+                <img src="${listing.image}" alt="${listing.title}">
+                <p>Price: $${listing.price}</p>
+                <p>Location: ${listing.location}, ${listing.country}</p>
+            `;
+            listingsContainer.appendChild(listingDiv);
+        });
+    </script>

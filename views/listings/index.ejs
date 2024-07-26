@@ -1,26 +1,50 @@
 <% layout("/layouts/boilerplate.ejs") %>
- 
-    <h3>All Listings</h3>
-    <!-- <form method="GET" action="/listings/new">
-      <button>Create New Listing</button>
-    </form> -->
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-    <% for(let listing of allListings) { %>
-      <a href="/listings/<%= listing._id %>" class="listing-link">
-    <div class="card cal">
-      <img src="<%=listing.image%>" class="card-img-top" alt="listing_image" style="height: 20rem">'
-      <div class="card-img-overlay"></div>
-      <div class="card-body">
-        <p class="card-text">
-         <b> <%= listing.title %></b>
-          <br>
-          &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
-        </p>
-      </div>
-      
-    </div>
-  </a>
-    <% } %>
+
+<br>
+
+<!-- Filter Section -->
+<div class="container mt-3">
+  <div class="filter-bar justify-content-center">
+    <!-- Type Filters -->
+    <button class="filter-btn" data-filter="type" data-value="entire"><i class="fa-solid fa-house"></i> Entire Place</button>
+    <button class="filter-btn" data-filter="type" data-value="private"><i class="fa-solid fa-bed"></i> Private Room</button>
+    <button class="filter-btn" data-filter="type" data-value="shared"><i class="fa-solid fa-door-open"></i> Shared Room</button>
+    <button class="filter-btn" data-filter="superhost" data-value="true"><i class="fa-solid fa-star"></i> Superhost</button>
+    <button class="filter-btn" data-filter="price" data-value="price"><i class="fa-solid fa-dollar-sign"></i> Price</button>
+    <button class="filter-btn" data-filter="availability" data-value="available"><i class="fa-solid fa-calendar"></i> Availability</button>
+
+    <!-- Destination Filters -->
+    <button class="filter-btn" data-filter="destination" data-value="mountain"><i class="fa-solid fa-mountain"></i> Mountain</button>
+    <button class="filter-btn" data-filter="destination" data-value="beach"><i class="fa-solid fa-umbrella-beach"></i> Beach</button>
+    <button class="filter-btn" data-filter="destination" data-value="city"><i class="fa-solid fa-city"></i> City</button>
+    <button class="filter-btn" data-filter="destination" data-value="forest"><i class="fa-solid fa-tree"></i> Forest</button>
+    <button class="filter-btn" data-filter="destination" data-value="resort"><i class="fa-solid fa-hotel"></i> Resort</button>
+
+    <!-- New Destination Filters -->
+    <button class="filter-btn" data-filter="destination" data-value="snow"><i class="fa-solid fa-snowflake"></i> Snow</button>
+    <button class="filter-btn" data-filter="destination" data-value="spa"><i class="fa-solid fa-spa"></i> Spa</button>
+    <button class="filter-btn" data-filter="destination" data-value="vineyard"><i class="fa-solid fa-wine-bottle"></i> Vineyard</button>
+    <button class="filter-btn" data-filter="destination" data-value="lake"><i class="fa-solid fa-water"></i> Lake</button>
+    <button class="filter-btn" data-filter="destination" data-value="camping"><i class="fa-solid fa-campground"></i> Camping</button>
   </div>
+</div>
+
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+  <% for(let listing of allListings) { %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+  <div class="card col listing-card">
+    <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 20rem">'
+    <div class="card-img-overlay"></div>
+    <div class="card-body">
+      <p class="card-text">
+       <b> <%= listing.title %></b>
+        <br>
+        &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
+      </p>
+    </div>
     
-  
+  </div>
+</a>
+  <% } %>
+</div>
