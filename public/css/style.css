@@ -77,6 +77,8 @@ body {
 .listing-card {
   border: none !important;
   margin-bottom: 2rem;
+  overflow: hidden; /* Ensure the card contents don't overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth scaling and shadow */
 }
 
 .card-img-top {
@@ -98,13 +100,20 @@ body {
 }
 
 .card-img-overlay {
-  opacity: 0;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease, background-color 0.3s ease !important; /* Add transition for smooth hover effect */
 }
 
-.card-img-overlay:hover {
-  opacity: 0.2;
-  background-color: white;
+.card:hover .card-img-overlay {
+  opacity: 0.2 !important;
+  background-color: white !important;
 }
+
+.card:hover {
+  transform: scale(1.05) !important; /* Scale the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect to give depth */
+}
+
 
 .add-btn {
   background-color: #fe242d !important;
