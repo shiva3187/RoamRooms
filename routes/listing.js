@@ -72,12 +72,35 @@ router.get("/", isLoggedIn,wrapAsync(async (req, res) => {
   }));
   
   //Update Route
-  router.put("/:id",isLoggedIn, validatelisting,wrapAsync(async (req, res) => {
-    let { id } = req.params;
+  // router.put("/:id",isLoggedIn, validatelisting,wrapAsync(async (req, res) => {
+  //   let { id } = req.params;
    
-    await Listing.findByIdAndUpdate(id, { ...req.body.listing });
-    req.flash("success","Listing Update");
-    res.redirect(`/listings/${id}`);
+  //   await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+  //   req.flash("success","Listing Update");
+  //   res.redirect(`/listings/${id}`);
+  // }));
+
+
+  router.put("/:id", isLoggedIn, upload.single('listing[image]'), validatelisting, wrapAsync(async (req, res) => {
+    const { id } = req.params;
+    const listing = await Listing.findById(id);
+  
+    // Update other fields
+    listing.title = req.body.listing.title;
+    listing.description = req.body.listing.description;
+    listing.price = req.body.listing.price;
+    listing.country = req.body.listing.country;
+    listing.location = req.body.listing.location;
+  
+    // Update the image if a new one is uploaded
+    if (req.file) {
+      listing.image.url = req.file.path;
+      listing.image.filename = req.file.filename;
+    }
+  
+    await listing.save();
+    req.flash("success", "Listing Updated");
+    res.redirect(`/listings/${listing._id}`);
   }));
   
   //Delete Route

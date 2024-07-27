@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<div class="row">
+    <div class="col-8 offset-2">
+<h2 class="mt-3">Hotel Booking Form</h2>
+<form id="bookingForm">
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required/>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required/>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number:</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required/>
+    </div>
+    <div class="mb-3">
+        <label for="checkin" class="form-label">Check-in Date:</label>
+        <input type="date" class="form-control" id="checkin" name="checkin" required/>
+    </div>
+    <div class="mb-3">
+        <label for="checkout" class="form-label">Check-out Date:</label>
+        <input type="date" class="form-control" id="checkout" name="checkout" required/>
+    </div>
+    <div class="mb-3">
+        <label for="roomType" class="form-label">Room Type:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="guests" class="form-label">Number of Guests:</label>
+        <input type="number" class="form-control" id="guests" name="guests" required min="1"/>
+    </div>
+    <div class="mb-3 ">
+        <input type="submit" class="btn btn-dark add-btn mb-3 mt-3" class="form-control" value="Proceed"/>
+    </div>
+</form>
+</div>
+</div>

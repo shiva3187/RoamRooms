@@ -227,6 +227,29 @@ footer .text-center {
   font-size: larger;
 }
 
+/* //search button */
+.btn-search{
+  background-color: #fe242d;
+  color: #fff;
+    border-radius:25px;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .btn-search:hover{
+    background-color: black
+  }
+
+.btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  .search-input{
+    border-radius:25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .filter-bar {

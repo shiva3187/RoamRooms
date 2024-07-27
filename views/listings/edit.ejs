@@ -4,71 +4,48 @@
   <div class="col-8 offset-2">
     <br>
     <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
-
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input name="listing[title]" value="<%= listing.title %>"type="text" class="form-control"required/>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
+        <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required />
+        <div class="valid-feedback">Looks good!</div>
       </div>
-      
-   <div class="mb-3"> 
-    <label for="description" class="form-label">Description</label>
-      <textarea
-        name="listing[description]"
-        class="form-control"
-        required
-      ><%= listing.description %></textarea>
-      <div class="invalid-feedback">
-        Write a Short Description!
-      </div>
-    </div lass="mb-3">
 
       <div class="mb-3">
-        <label for="image" class="form-label">Upload Image</label>
-      <input
-        name="listing[image]"
-        value="<%= listing.image.url%>"
-        type="file" class="form-control"
-        required
-      />
-      
-      <div class="invalid-feedback">
-        insert image!
-      </div>
-       </div>
-  <div class="row">
-      <div class="mb-3 col-md-4">
-        <label for="price" class="form-label">Price</label>
-      <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control"required/>
-      <div class="invalid-feedback">
-        Enter a Valid Price!
-      </div>
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+        <div class="invalid-feedback">Write a Short Description!</div>
       </div>
 
-      <div class="mb-3 col-md-8">
-        <label for="country" class="form-label">Country</label>
-      <input name="listing[country]"  value="<%= listing.country %>" type="text" class="form-control" required />
-      <div class="invalid-feedback">
-        Enter a Valid country!
-      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Current Image</label>
+        <img src="<%= listing.image.url %>" alt="Listing Image" class="img-thumbnail mb-3" />
       </div>
 
-  </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload New Image</label>
+        <input name="listing[image]" type="file" class="form-control" />
+        <div class="invalid-feedback">Insert image!</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required />
+          <div class="invalid-feedback">Enter a Valid Price!</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required />
+          <div class="invalid-feedback">Enter a Valid country!</div>
+        </div>
+      </div>
 
       <div class="mb-3">
         <label for="location" class="form-label">Location</label>
-      <input
-        name="listing[location]"
-        value="<%= listing.location %>"
-        type="text" class="form-control"
-        required 
-      />
-      <div class="invalid-feedback">
-        Enter a Valid Locations
-      </div>
+        <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required />
+        <div class="invalid-feedback">Enter a Valid Location!</div>
       </div>
       <br>
       <button class="btn btn-dark add-btn">Edit</button>
@@ -76,23 +53,3 @@
     </form>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-      
-      

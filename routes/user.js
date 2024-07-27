@@ -59,4 +59,18 @@ router.post('/login',
         });
     });
 
+
+    
+      //booking route
+    //   router.get("/:id", wrapAsync(async (req, res) => {
+    //     let { id } = req.params;
+    //     const listing = await Listing.findById(id).populate("reviews");
+    //     if(!listing){
+    //         req.flash("error","Listing you requested for does not Exist");
+    //         res.redirect("/listings")
+    //     }
+    //     res.render("/booking.ejs", { listing });
+    //   }));
+      
+
 module.exports=router;

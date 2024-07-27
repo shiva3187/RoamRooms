@@ -23,7 +23,7 @@ const validatereview=(req,res,next)=>{
 router.post("/",validatereview,wrapAsync(async(req,res)=>{
     console.log(req.params.id);
     let listing= await Listing.findById(req.params.id);
-    let newReview=new Review(req.body.review);
+    let newReview=new Review(req.body.reviews);
   
     listing.reviews.push(newReview);
     await newReview.save();
