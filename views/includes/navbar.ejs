@@ -1,21 +1,26 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top">
-    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    <a class="navbar-brand ms-3" href="/listings"><i class="fa-solid fa-compass"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         
-        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link ms-4" href="/listings"><b>Explore</b></a>
       </div>
-          <div class="navbar-nav ms-auto">
-            <form class="d-flex" role="search">
-              <input class="form-control mx-2 search-input" type="search" placeholder="Search Destinations">
-              <button class="btn-search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>Search</button>
-            </form>
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search">
+          <div class="input-group">
+            <input class="form-control search-input " type="search" placeholder="RoamRooms" aria-label="Search" style="font-size: 1.25em; font-weight: bold;">
+            <span class="input-group-text bg-transparent border-0">
+              <i class="fa-solid fa-magnifying-glass search-icon ms-2 mt-3"></i>
+            </span>
           </div>
+        </form>
+      </div>
+      
+      
           
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new">Add Your Destination</a>

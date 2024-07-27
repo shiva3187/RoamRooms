@@ -154,6 +154,39 @@ body {
   padding-right: 0;
 }
 
+.search-input {
+  padding-right: 0;
+  font-size: 1.5em; /* Increase the font size */
+  height: 3em; /* Increase the height */
+  box-shadow: 0 4px 8px #fe242d(0, 0, 0, 0.1); /* Add shadow */
+  border: 5px solid #9a1d1d; /* Add border */
+  border-radius: 4px 4px 4px 4px; /* Round the left corners */
+  border-color: #fe242d;
+  
+}
+
+.input-group-text {
+  padding-left: 0;
+  border-left: none;
+  height: 3em; /* Match the height of the input */
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc; /* Add border */
+  border-left: none; /* Remove the left border */
+  border-radius: 0 4px 4px 0; /* Round the right corners */
+  background: white; /* Ensure the background matches the input */
+}
+
+.input-group {
+  flex-grow: 1;
+}
+
+.search-icon {
+  font-size: 1.5em; /* Increase the size of the search icon */
+}
+
+
+
 /* New Filter Button Styles */
 .filter-bar {
   display: flex;
