@@ -22,7 +22,7 @@ const validatelisting=(req,res,next)=>{
   };
 
 //Index Route
-router.get("/", wrapAsync(async (req, res) => {
+router.get("/", isLoggedIn,wrapAsync(async (req, res) => {
     const allListings = await Listing.find({});
     res.render("listings/index.ejs", { allListings });
   }));

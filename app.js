@@ -28,8 +28,8 @@ main()
   .then(() => {
     console.log("connected to DB");
   })
-  .catch((err) => {
-    console.log(err);
+  .catch((error) => {
+    console.log(error);
   });
 
 async function main() {
@@ -75,9 +75,9 @@ const sessionOptions={
   },
 };
 
-// app.get("/", (req, res) => {
-//   res.send("Hi, I am root");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 
 
