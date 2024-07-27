@@ -40,7 +40,8 @@
       <p class="card-text">
        <b> <%= listing.title %></b>
         <br>
-        &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
+        &#8377; <%= typeof listing.price === 'number' ? listing.price.toLocaleString("en-IN") : 'N/A' %>/night
+
       </p>
     </div>
     
