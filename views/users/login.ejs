@@ -1,33 +1,38 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-<div class="row mt-3">
-    <h1 class="col-8 offset-2">Login on RoamRooms</h1>
-    <div class="col-8 offset-2">
-          <form action="/login" method="POST" class="needs-validation" novalidate >
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-              <input
-                name="username"
-                id="username"
-                type="text" 
-                class="form-control"
-                required
-              />
-              <div class="valid-feedback">looks good!</div>
-              </div>
-
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-              <input
-                name="password"
-                id="password"
-                type="text" 
-                class="form-control"
-                required
-              />
-              </div>
-              <button class="btn btn-dark add-btn mb-3 mt-3">Login</button>
-          </form>
-
+<div class="row mt-5 justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0" style="background-color: #f8f9fa;">
+            <!-- <img src="/path-to-your-image.jpg" class="card-img-top" alt="Login Image" style="border-radius: 0;"> -->
+            <div class="card-body p-4">
+                <h2 class="text-center mb-4">Login to RoamRooms</h2>
+                <form action="/login" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input
+                            name="username"
+                            id="username"
+                            type="text"
+                            class="form-control"
+                            required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input
+                            name="password"
+                            id="password"
+                            type="password"
+                            class="form-control"
+                            required
+                        />
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-dark add-btn ms-auto">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

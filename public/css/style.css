@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0; /* Ensure no default margin on body */
+  background-color: rgb(211, 244, 246)!important;
 }
 
 .container {
@@ -14,10 +15,11 @@ body {
 
 .navbar {
   height: 5rem;
+  background-color: #2373e3 !important;
 }
 
 .fa-compass {
-  color: #fe242d;
+  color: #2373e3;
   font-size: 2rem;
   background-color: white;
 }
@@ -89,6 +91,7 @@ body {
 
 .card-body {
   padding: 0 !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .card-text {
@@ -100,12 +103,12 @@ body {
 }
 
 .card-img-overlay {
-  opacity: 0 !important;
+  opacity: 0.5 !important;
   transition: opacity 0.3s ease, background-color 0.3s ease !important; /* Add transition for smooth hover effect */
 }
 
 .card:hover .card-img-overlay {
-  opacity: 0.2 !important;
+  opacity: 0.0 !important;
   background-color: white !important;
 }
 
@@ -116,7 +119,7 @@ body {
 
 
 .add-btn {
-  background-color: #fe242d !important;
+  background-color: #2373e3 !important;
   color: black !important;
   border: none !important;
   border-radius: 0.5rem !important;
@@ -139,7 +142,7 @@ body {
 }
 
 .btn {
-  background-color: #fe242d !important;
+  background-color: #2373e3 !important;
   color: black !important;
   border: none !important;
   border-radius: 0.5rem !important;
@@ -223,7 +226,7 @@ body {
 }
 
 .filter-btn:hover {
-  background-color: #fe242d;
+  background-color: #2373e3;
   color: white;
 }
 
@@ -239,7 +242,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #fe242d;
+  color: #2c7ec1;
 }
 
 footer .btn {
@@ -271,7 +274,7 @@ footer .text-center {
 
 /* //search button */
 .btn-search{
-  background-color: #fe242d;
+  background-color: #2373e3;
   color: #fff;
     border-radius:25px;
     padding: 0 1rem 0 1rem;
